@@ -1,6 +1,2 @@
-UserDetails.java
- UserDetails
-UserRegistrationException.java
- UserRegistrationException
 UserRegistration.java
  UserRegistration

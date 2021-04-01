@@ -7,10 +7,12 @@ import java.util.Collection;
 
 @RunWith(Parameterized.class)
 public class ValidateEmail {
-    private final String emailTest;
-    private final boolean expectedResult;
+    private UserRegistration userRegistration;
+    private String emailId;
+    private boolean expectedResult;
+
     public ValidateEmail(String email, boolean expectedResult) {
-        this.emailTest = email;
+        this.emailId = email;
         this.expectedResult = expectedResult;
     }
     @Parameterized.Parameters
@@ -38,9 +40,7 @@ public class ValidateEmail {
                 , {"abc@gmail.com.1a", false}});
     }
     @Test
-    public void givenEmailAsVar_ShouldReturnAsPerTheParameterizedResult() throws UserRegistrationException {
-        UserDetails user = new UserDetails();
-        boolean result = user.userEmail(this.emailTest);
-        Assert.assertEquals(this.expectedResult, result);
+    public void testUserEmailId() {
+        Assert.assertEquals(expectedResult,userRegistration.validateEmailId(emailId));
     }
 }

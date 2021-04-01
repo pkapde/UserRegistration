@@ -1,4 +1,4 @@
 ValidateEmail.java
  ValidateEmail
 UserRegistrationTest.java
- UserRegistraionTest
+ UserRegistrationTest
