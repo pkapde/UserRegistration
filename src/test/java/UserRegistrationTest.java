@@ -65,26 +65,31 @@ public class UserRegistrationTest {
         boolean passwordAtLeastOneUpperCaseCharacter = UserRegistration.validatePassword("Pkapde308", UserRegistration.PASSWORD_AT_LEAST_ONE_UPPERCASE_CHARACTER);
         Assert.assertTrue(passwordAtLeastOneUpperCaseCharacter);
     }
+
     @Test
     public void givenPasswordHasAtLeastOneUpperCaseLetter_WhenImproper_ShouldReturnFalse() {
         boolean passwordAtLeastOneUpperCaseCharacter = UserRegistration.validatePassword("pkapde308", UserRegistration.PASSWORD_AT_LEAST_ONE_UPPERCASE_CHARACTER);
         Assert.assertFalse(passwordAtLeastOneUpperCaseCharacter);
     }
+
     @Test
     public void givenPasswordHasAtLeastOneNumber_WhenProper_ShouldReturnTrue() {
         boolean passwordAtLeastOneNumber = UserRegistration.validatePassword("Pkapde308", UserRegistration.PASSWORD_AT_LEAST_ONE_Number);
         Assert.assertTrue(passwordAtLeastOneNumber);
     }
+
     @Test
     public void givenPasswordHasAtLeastOneNumber_WhenProper_ShouldReturnFalse() {
         boolean passwordAtLeastOneNumber = UserRegistration.validatePassword("pkapdevivek", UserRegistration.PASSWORD_AT_LEAST_ONE_Number);
         Assert.assertFalse(passwordAtLeastOneNumber);
     }
+
     @Test
     public void givenPasswordHasExactlyOneSymbol_WhenProper_ShouldReturnTrue() {
         boolean passwordHasExactlyOneSymbol = UserRegistration.validatePassword("Pkapde308@", UserRegistration.PASSWORD_HAS_EXACTLY_ONE_SYMBOL);
         Assert.assertTrue(passwordHasExactlyOneSymbol);
     }
+
     @Test
     public void givenPasswordHasExactlyOneSymbol_WhenProper_ShouldReturnFalse() {
         boolean passwordHasExactlyOneSymbol = UserRegistration.validatePassword("pkapde@123", UserRegistration.PASSWORD_HAS_EXACTLY_ONE_SYMBOL);
